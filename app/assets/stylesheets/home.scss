@@ -1,0 +1,391 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@screen-sm-min : 770px;
+
+body {
+    background: #F3EFE0;
+    font-size: 16px;
+    line-height: 1.64;
+}
+
+html, body {
+    color: #434242;
+    font-family: 'Colfax', sans-serif !important;
+    height: 100%;
+}
+
+h2 {
+    font-size: 54px;
+    text-align: center;
+}
+
+h2, h3 {
+    font-weight: 300;
+    color: #22A39F;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+p.lead {
+    text-align: center;
+    color: #727878;
+}
+
+p {
+    font-weight: 200;
+}
+
+hr {
+    margin: 40px 0px;
+    border-color: #727878;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+}
+
+/* Top Container */
+
+.top-container {
+  height: 100vh;
+}
+
+.jumbotron { // Background-image
+    background: no-repeat center right fixed url(/background.jpg);
+    margin-bottom: 0px;
+    padding: 0px;
+    background-size: cover;
+
+}
+
+.jumbotron .container { // Postion
+    position: relative;
+    top: 28%;
+    z-index: 4;
+    text-align: center;
+}
+
+.jumbotron .container h1 { // Border
+    padding-bottom: 20px;
+    border-bottom: 1px solid #FFFFFF;
+    border-bottom-color: rgba(255,255,255,0.35);
+    display: inline-block;
+}
+
+.jumbotron .container > * { // Font color&align for both h1 & p
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.jumbotron .overlay {
+    background-color: #22A39F;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    opacity: 0.75;
+    z-index: 2;
+}
+
+/* Profile Section */
+
+.background-white {
+    background: #FFFFFF;
+}
+
+.container {
+    max-width: 1280px;
+    padding: 40px 60px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 60px 20px;
+    min-width: 280px;
+  }
+}
+
+#profile .row > div img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    border: 10px solid;
+    border-color: rgba(34, 163, 159, 0.2);
+}
+
+@media (max-width: 767px) {
+  #profile .row > div br {
+    display: none;
+  }
+}
+
+@media (max-width: 992px){
+  #profile .row * {
+      text-align: center;
+  }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+  #profile .row * {
+      text-align: center;
+  }
+}
+
+/*
+ * Experience Section */
+
+@media (max-width: 767px){
+  .hidden-phone {
+    display: none;
+  }
+}
+
+#experiences .experience .experience-details * {
+    color: #22A39F;
+}
+
+#experiences .experience .experience-details {
+    display: block;
+    margin-top: 6px;
+}
+
+#abilities .row > div .ability {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 200;
+}
+
+#abilities ul > li {
+    min-height: 30px;
+    padding: 3px 0px;
+}
+
+#abilities ul > li .ability-title {
+    display: inline-block;
+    width: 60%;
+}
+#abilities ul > li .ability-score .glyphicon.filled {
+    color: #22A39F;
+}
+
+#abilities ul > li .ability-score .glyphicon {
+    color: #DFE0E0;
+    font-size: 14px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#abilities ul > li:hover .ability-score .glyphicon { margin-left: 2px; }
+
+#abilities ul > li .ability-score { float: right; }
+
+
+/* Project Section */
+
+
+#projects .row > div {
+    margin-bottom: 30px;
+}
+.overlay {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow: hidden;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+}
+
+.overlay-fade { /* Fade effect */
+    opacity: .7
+}
+
+.overlay-hover:hover .overlay-fade { /* Fade effect */
+    opacity: 1
+}
+
+.overlay-hover:hover .overlay-scale { /* Scale effect */
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1)
+}
+
+.overlay-hover:hover .overlay-spin { /* Spin effect */
+    -webkit-transform: scale(1.1) rotate(3deg);
+    -ms-transform: scale(1.1) rotate(3deg);
+    -o-transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1) rotate(3deg)
+}
+
+.overlay-hover:hover [class*=overlay-slide] {
+    opacity: 1;
+    -webkit-transform: translateX(0) translateY(0);
+    -ms-transform: translateX(0) translateY(0);
+    -o-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0)
+}
+
+.overlay .overlay-figure{
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0
+}
+
+.overlay-hover:hover .overlay-figure { /* Scale Effect for image */
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+
+    -webkit-transition-duration: .3s;
+    -o-transition-duration: .3s;
+    transition-duration: .3s
+}
+
+.overlay-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    color: #fff
+}
+
+.overlay-panel a:not([class]) {
+    color: inherit;
+    text-decoration: underline
+}
+
+.overlay-panel>:last-child {
+    margin-bottom: 0
+}
+
+.overlay-panel h1,.overlay-panel h2,.overlay-panel h3,.overlay-panel h4,.overlay-panel h5,.overlay-panel h6 {
+    color: inherit
+}
+
+.overlay-hover:not(:hover) .overlay-panel:not(.overlay-background-fixed) {
+    opacity: 0
+}
+
+.overlay-background {
+    background: rgba(34,163,159,.9)
+}
+
+.overlay-slide-right {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%)
+}
+
+.overlay-blur,.overlay-fade,.overlay-grayscale,.overlay-scale,.overlay-spin,[class*=overlay-slide] {
+    -webkit-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transition-duration: .3s;
+    -o-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-property: opacity -webkit-transform -webkit-filter,opacity -webkit-transform filter;
+    -o-transition-property: opacity -o-transform filter;
+    transition-property: opacity transform filter
+}
+
+.overlay-panel hr {
+    margin: 10px 0px;
+    border-color: #fff;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+#projects figure a {
+  	z-index: 1000;
+  	text-indent: 200%;
+  	white-space: nowrap;
+  	font-size: 0;
+  	opacity: 0;
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	height: 100%;
+  	width: 100%;
+}
+
+#projects figure .icon {
+    background: #22A39F;
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 48px;
+    height: 48px;
+}
+
+#projects figure .icon span {
+  	font-size: 18px;
+  	line-height: 18px;
+  	padding: 15px;
+}
+
+
+/* Contact */
+
+.background-gray {
+    background: #434242;
+}
+
+#contact {
+    padding-bottom: 200px;
+}
+
+#contact h2 {
+    color: #fff;
+}
+
+#contact a {
+    display: block;
+    line-height: 32px;
+    margin-bottom: 20px;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    font-weight: 500%;
+}
+
+#contact a:hover {
+    opacity: 1;
+    filter:alpha(opacity=100);
+    text-decoration: none;
+}
+
+.icon {
+    display: inline-block;
+    background: url(/sm_icon_sprite.png) no-repeat;
+    height: 32px;
+    width: 32px;
+}
+
+#contact h2, #contact .row * {
+    color: #FFFFFF;
+}
+
+#contact a .icon {
+    float: left;
+    margin-right: 20px;
+}
+
+.icon.icon-twitter { background-position: 0px 0px; }
+.icon.icon-linkedin { background-position: 0px -32px; }
+.icon.icon-skype { background-position: 0px -64px; }
+.icon.icon-email { background-position: 0px -96px; }
